@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import DummyComponent from '../dist/dummy-component.umd';
+import DummyComponent from '../../dist/dummy-component.umd';
 
 describe('DummyComponent', () => {
 
