@@ -1,64 +1,75 @@
 {
-    "name": "vue-dummy-published-component",
-    "version": "1.0.0",
-    "description": "Dummy repo for a sample Vue component published to npm",
-    "author": "matt@brophy.org",
-    "license": "MIT",
-    "main": "dist/dummy-component.umd.js",
-    "module": "dist/dummy-component.esm.js",
-    "unpkg": "dist/dummy-component.min.js",
-    "browser": {
-        "./sfc": "src/DummyComponent.vue"
-    },
-    "files": [
-        "dist/*",
-        "src/*"
-    ],
-    "scripts": {
-        "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
-        "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/dummy-component.umd.js",
-        "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/dummy-component.esm.js",
-        "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/dummy-component.min.js",
-        "lint": "eslint --ext js,vue .",
-        "test": "npm run test:unit && npm run test:e2e",
-        "test:e2e": "cypress run",
-        "test:e2e:open": "cypress open",
-        "test:unit": "jest"
-    },
-    "devDependencies": {
-        "@babel/core": "7.2.2",
-        "@babel/preset-env": "7.3.1",
-        "@vue/test-utils": "1.0.0-beta.29",
-        "babel-core": "7.0.0-bridge.0",
-        "babel-eslint": "10.0.1",
-        "babel-jest": "24.1.0",
-        "cross-env": "5.2.0",
-        "cypress": "3.2.0",
-        "eslint": "5.13.0",
-        "eslint-config-airbnb-base": "13.1.0",
-        "eslint-plugin-import": "2.16.0",
-        "eslint-plugin-vue": "5.1.0",
-        "husky": "1.3.1",
-        "jest": "24.1.0",
-        "minimist": "1.2.0",
-        "rollup": "1.1.2",
-        "rollup-plugin-buble": "0.19.6",
-        "rollup-plugin-commonjs": "9.2.0",
-        "rollup-plugin-replace": "2.1.0",
-        "rollup-plugin-uglify-es": "0.0.1",
-        "rollup-plugin-vue": "4.6.2",
-        "vue": "2.5.22",
-        "vue-jest": "3.0.4",
-        "vue-template-compiler": "2.5.22"
-    },
-    "jest": {
-        "transform": {
-            "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
-        }
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run lint && npm run test"
-        }
+  "name": "vue-dummy-published-component",
+  "version": "1.0.0",
+  "description": "Dummy repo for a sample Vue component published to npm",
+  "author": "matt@brophy.org",
+  "license": "MIT",
+  "main": "dist/dummy-component.umd.js",
+  "module": "dist/dummy-component.esm.js",
+  "unpkg": "dist/dummy-component.min.js",
+  "browser": {
+    "./sfc": "src/DummyComponent.vue"
+  },
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "scripts": {
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/dummy-component.umd.js",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/dummy-component.esm.js",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/dummy-component.min.js",
+    "lint": "eslint --ext js,vue .",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:e2e": "cypress run",
+    "test:e2e:open": "cypress open",
+    "test:unit": "jest",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.3.1",
+    "@storybook/addon-actions": "^5.0.7",
+    "@storybook/addon-links": "^5.0.7",
+    "@storybook/addons": "^5.0.7",
+    "@storybook/vue": "^5.0.7",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "24.1.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-vue": "^2.0.2",
+    "cross-env": "5.2.0",
+    "cypress": "3.2.0",
+    "eslint": "5.13.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-cypress": "2.2.1",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-vue": "5.1.0",
+    "husky": "1.3.1",
+    "jest": "24.1.0",
+    "minimist": "1.2.0",
+    "rollup": "1.1.2",
+    "rollup-plugin-buble": "0.19.6",
+    "rollup-plugin-commonjs": "9.2.0",
+    "rollup-plugin-replace": "2.1.0",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-plugin-vue": "4.6.2",
+    "vue": "2.5.22",
+    "vue-jest": "3.0.4",
+    "vue-loader": "15.7.0",
+    "vue-template-compiler": "2.5.22"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run storybook:build && npm run test"
+    }
+  },
+  "dependencies": {}
 }

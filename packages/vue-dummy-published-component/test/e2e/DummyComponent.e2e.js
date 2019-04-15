@@ -1,7 +1,12 @@
-describe('My First Test', () => {
+describe('DummyComponent', () => {
 
-    it('Does not do much!', () => {
-        expect(true).to.equal(true);
+    it('Renders Hello World', () => {
+        cy.visit('storybook-static/index.html');
+        cy.get('#dummycomponent').click();
+        cy.get('#dummycomponent--usage').click();
+        cy.get('#storybook-preview-iframe')
+            .then($iframe => cy.wrap($iframe.contents().find('body')).as('iframe'));
+        cy.get('@iframe').find('h1.heading').should('contain', 'Hello World!');
     });
 
 });

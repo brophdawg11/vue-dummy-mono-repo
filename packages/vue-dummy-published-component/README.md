@@ -6,5 +6,3 @@ This is a sample repo for a Vue component that you intend to publish to the NPM 
  - NPM publish scripts
  - Local Development docs
  - Contributing docs
- - E2E tests with Cypress/TestCafe?
- - Storybook?

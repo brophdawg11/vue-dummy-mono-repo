@@ -45,4 +45,13 @@ module.exports = {
             }
         }]
     },
+    overrides: [{
+        files: ['test/e2e/**/*.js'],
+        plugins: ['cypress'],
+    }, {
+        files: ['stories/**/*.js'],
+        rules: {
+            'import/no-extraneous-dependencies': 'off'
+        },
+    }],
 }
