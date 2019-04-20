@@ -14,6 +14,13 @@
     "dist/*",
     "src/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brophdawg11/vue-dummy-mono-repo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brophdawg11/vue-dummy-mono-repo/issues"
+  },
   "scripts": {
     "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
     "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/dummy-component-2.umd.js",
