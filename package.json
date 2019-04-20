@@ -13,13 +13,12 @@
     "url": "https://github.com/brophdawg11/vue-dummy-mono-repo/issues"
   },
   "scripts": {
-    "lerna": "lerna",
+    "clean": "lerna exec -- rm -rf dist && rm -rf storybook-static",
     "lint": "eslint --ext js,vue .",
-    "test": "npm run unit && npm run e2e",
-    "e2e": "lerna run e2e",
-    "storybook:build": "lerna run storybook:build",
-    "unit": "jest",
-    "version": "lerna clean --yes && lerna bootstrap --ignore-scripts -- --package-lock-only --no-audit && git add packages/*/package-lock.json"
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:e2e": "lerna exec -- cypress run",
+    "test:unit": "jest",
+    "storybook:build": "lerna exec -- build-storybook"
   },
   "devDependencies": {
     "@babel/core": "7.2.2",

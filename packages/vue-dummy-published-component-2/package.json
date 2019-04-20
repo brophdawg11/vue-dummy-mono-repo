@@ -33,11 +33,9 @@
     "build:es": "NODE_ENV=production rollup --config ../../rollup.config.js --format es",
     "build:unpkg": "NODE_ENV=production rollup --config ../../rollup.config.js --format iife",
     "clean": "rm -rf dist && rm -rf storybook-static",
-    "e2e": "cypress run",
-    "e2e:open": "cypress open",
+    "cypress": "cypress open",
     "prepublishOnly": "npm run clean && npm run build",
-    "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook"
+    "storybook": "start-storybook -p 6006"
   },
   "devDependencies": {
     "@storybook/addon-actions": "file:../../node_modules/@storybook/addon-actions",
