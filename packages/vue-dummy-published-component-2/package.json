@@ -34,17 +34,17 @@
     "storybook:build": "build-storybook"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "5.0.7",
-    "@storybook/addon-links": "5.0.7",
-    "@storybook/addons": "5.0.7",
-    "@storybook/vue": "5.0.7",
-    "cypress": "3.2.0",
-    "minimist": "1.2.0",
-    "rollup": "1.1.2",
-    "rollup-plugin-buble": "0.19.6",
-    "rollup-plugin-commonjs": "9.2.0",
-    "rollup-plugin-replace": "2.1.0",
-    "rollup-plugin-uglify-es": "0.0.1",
-    "rollup-plugin-vue": "4.6.2"
+    "@storybook/addon-actions": "file:../../node_modules/@storybook/addon-actions",
+    "@storybook/addon-links": "file:../../node_modules/@storybook/addon-links",
+    "@storybook/addons": "file:../../node_modules/@storybook/addons",
+    "@storybook/vue": "file:../../node_modules/@storybook/vue",
+    "cypress": "file:../../node_modules/cypress",
+    "minimist": "file:../../node_modules/minimist",
+    "rollup": "file:../../node_modules/rollup",
+    "rollup-plugin-buble": "file:../../node_modules/rollup-plugin-buble",
+    "rollup-plugin-commonjs": "file:../../node_modules/rollup-plugin-commonjs",
+    "rollup-plugin-replace": "file:../../node_modules/rollup-plugin-replace",
+    "rollup-plugin-uglify-es": "file:../../node_modules/rollup-plugin-uglify-es",
+    "rollup-plugin-vue": "file:../../node_modules/rollup-plugin-vue"
   }
 }
