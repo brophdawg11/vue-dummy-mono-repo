@@ -4,11 +4,40 @@
   "description": "Sample MonoRepo for Dummy Published Vue Components",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lerna": "lerna",
+    "lint": "eslint --ext js,vue .",
+    "test": "npm run unit && lerna run e2e",
+    "unit": "jest"
   },
   "author": "matt@brophy.org",
   "license": "MIT",
   "devDependencies": {
-    "lerna": "^3.13.3"
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.3.1",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "24.1.0",
+    "babel-loader": "8.0.5",
+    "babel-preset-vue": "2.0.2",
+    "cross-env": "5.2.0",
+    "eslint": "5.13.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-cypress": "2.2.1",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-vue": "5.1.0",
+    "husky": "1.3.1",
+    "jest": "24.1.0",
+    "lerna": "3.13.3",
+    "vue": "2.5.22",
+    "vue-jest": "3.0.4",
+    "vue-loader": "15.7.0",
+    "vue-template-compiler": "2.5.22",
+    "webpack": "4.30.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && lerna run storybook:build && npm run test"
+    }
   }
 }

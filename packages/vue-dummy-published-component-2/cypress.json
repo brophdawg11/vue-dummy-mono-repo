@@ -1,0 +1,8 @@
+{
+    "integrationFolder": "test/e2e",
+    "fixturesFolder": false,
+    "pluginsFile": false,
+    "supportFile": false,
+    "testFiles": "**/*.e2e.js",
+    "video": false
+}
