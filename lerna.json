@@ -1,6 +1,16 @@
 {
-  "packages": [
-    "packages/*"
-  ],
-  "version": "independent"
+    "command": {
+        "version": {
+            "allowBranch": "master",
+            "message": "release: publish new version %s"
+        }
+    },
+    "ignoreChanges": [
+        "**/test/**",
+        "**/*.md"
+    ],
+    "packages": [
+        "packages/*"
+    ],
+    "version": "independent"
 }
