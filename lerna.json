@@ -2,7 +2,7 @@
     "command": {
         "version": {
             "allowBranch": "master",
-            "message": "release: publish new version %s"
+            "message": "release: publish new version"
         }
     },
     "ignoreChanges": [
