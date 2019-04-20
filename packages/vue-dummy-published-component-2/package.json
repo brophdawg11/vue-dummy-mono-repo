@@ -1,6 +1,6 @@
 {
   "name": "vue-dummy-published-component-2",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Sample Vue component published to npm",
   "author": "matt@brophy.org",
   "license": "MIT",
@@ -28,7 +28,7 @@
     }
   },
   "scripts": {
-    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build": "npm run build:unpkg && npm run build:es && npm run build:umd",
     "build:umd": "NODE_ENV=production rollup --config ../../rollup.config.js --format umd",
     "build:es": "NODE_ENV=production rollup --config ../../rollup.config.js --format es",
     "build:unpkg": "NODE_ENV=production rollup --config ../../rollup.config.js --format iife",
