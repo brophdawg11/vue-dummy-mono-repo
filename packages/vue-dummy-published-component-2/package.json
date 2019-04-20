@@ -1,8 +1,7 @@
 {
   "name": "vue-dummy-published-component-2",
-  "globalName": "DummyComponent2",
   "version": "1.0.4",
-  "description": "Dummy repo for a sample Vue component published to npm",
+  "description": "Sample Vue component published to npm",
   "author": "matt@brophy.org",
   "license": "MIT",
   "main": "dist/dummy-component-2.umd.js",
