@@ -1,5 +1,6 @@
 {
   "name": "vue-dummy-published-component-2",
+  "globalName": "DummyComponent2",
   "version": "1.0.3",
   "description": "Dummy repo for a sample Vue component published to npm",
   "author": "matt@brophy.org",
@@ -21,11 +22,16 @@
   "bugs": {
     "url": "https://github.com/brophdawg11/vue-dummy-mono-repo/issues"
   },
+  "rollup": {
+    "output": {
+      "name": "DummyComponent2"
+    }
+  },
   "scripts": {
     "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
-    "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/dummy-component-2.umd.js",
-    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/dummy-component-2.esm.js",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/dummy-component-2.min.js",
+    "build:umd": "NODE_ENV=production rollup --config ../../rollup.config.js --format umd",
+    "build:es": "NODE_ENV=production rollup --config ../../rollup.config.js --format es",
+    "build:unpkg": "NODE_ENV=production rollup --config ../../rollup.config.js --format iife",
     "clean": "rm -rf dist && rm -rf storybook-static",
     "e2e": "cypress run",
     "e2e:open": "cypress open",
@@ -38,6 +44,7 @@
     "@storybook/addon-links": "file:../../node_modules/@storybook/addon-links",
     "@storybook/addons": "file:../../node_modules/@storybook/addons",
     "@storybook/vue": "file:../../node_modules/@storybook/vue",
+    "cross-env": "file:../../node_modules/cross-env",
     "cypress": "file:../../node_modules/cypress",
     "minimist": "file:../../node_modules/minimist",
     "rollup": "file:../../node_modules/rollup",

@@ -1,3 +1,5 @@
+import { join } from 'path';
+import _ from 'lodash';
 import vue from 'rollup-plugin-vue';
 import buble from 'rollup-plugin-buble';
 import commonjs from 'rollup-plugin-commonjs';
@@ -7,10 +9,25 @@ import minimist from 'minimist';
 
 const argv = minimist(process.argv.slice(2));
 
-const config = {
+const pkgJsonFile = join(process.cwd(), 'package.json');
+
+// eslint-disable-next-line no-console
+console.log('Loading dynamic rollup config from', pkgJsonFile);
+
+// eslint-disable-next-line global-require, import/no-dynamic-require
+const pkgJson = require(pkgJsonFile);
+
+const fileTypeMap = {
+    umd: _.last(pkgJson.main.split('/')),
+    es: _.last(pkgJson.module.split('/')),
+    iife: _.last(pkgJson.unpkg.split('/')),
+};
+
+const config = _.merge({
     input: 'src/index.js',
     output: {
-        name: 'DummyComponent',
+        name: null, // To be specified in sub-package package.json
+        file: `dist/${fileTypeMap[argv.format]}`,
         exports: 'named',
     },
     plugins: [
@@ -27,7 +44,7 @@ const config = {
         }),
         buble(),
     ],
-};
+}, pkgJson.rollup);
 
 // Only minify browser (iife) version
 if (argv.format === 'iife') {
