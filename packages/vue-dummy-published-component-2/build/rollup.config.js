@@ -10,7 +10,7 @@ const argv = minimist(process.argv.slice(2));
 const config = {
     input: 'src/index.js',
     output: {
-        name: 'DummyComponent',
+        name: 'DummyComponent2',
         exports: 'named',
     },
     plugins: [

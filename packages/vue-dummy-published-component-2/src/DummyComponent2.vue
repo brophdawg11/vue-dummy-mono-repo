@@ -1,12 +1,12 @@
 <template>
     <h1 class="heading">
-        Hello World!
+        Hello World 2!
     </h1>
 </template>
 
 <script>
 export default {
-    name: 'DummyComponent',
+    name: 'DummyComponent2',
 };
 </script>
 

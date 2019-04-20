@@ -1,11 +1,11 @@
-import DummyComponent from './DummyComponent.vue';
+import DummyComponent2 from './DummyComponent2.vue';
 
 function install(Vue) {
     if (install.installed) {
         return;
     }
     install.installed = true;
-    Vue.component('DummyComponent', DummyComponent);
+    Vue.component('DummyComponent2', DummyComponent2);
 }
 
 const plugin = {
@@ -23,6 +23,6 @@ if (GlobalVue) {
     GlobalVue.use(plugin);
 }
 
-DummyComponent.install = install;
+DummyComponent2.install = install;
 
-export default DummyComponent;
+export default DummyComponent2;

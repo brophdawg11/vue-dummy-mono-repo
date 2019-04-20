@@ -4,11 +4,11 @@
   "description": "Dummy repo for a sample Vue component published to npm",
   "author": "matt@brophy.org",
   "license": "MIT",
-  "main": "dist/dummy-component.umd.js",
-  "module": "dist/dummy-component.esm.js",
-  "unpkg": "dist/dummy-component.min.js",
+  "main": "dist/dummy-component-2.umd.js",
+  "module": "dist/dummy-component-2.esm.js",
+  "unpkg": "dist/dummy-component-2.min.js",
   "browser": {
-    "./sfc": "src/DummyComponent.vue"
+    "./sfc": "src/DummyComponent2.vue"
   },
   "files": [
     "dist/*",
@@ -16,9 +16,9 @@
   ],
   "scripts": {
     "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
-    "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/dummy-component.umd.js",
-    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/dummy-component.esm.js",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/dummy-component.min.js",
+    "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/dummy-component-2.umd.js",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/dummy-component-2.esm.js",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/dummy-component-2.min.js",
     "clean": "rm -rf dist && rm -rf storybook-static",
     "e2e": "cypress run",
     "e2e:open": "cypress open",
