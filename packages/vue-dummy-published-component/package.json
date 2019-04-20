@@ -12,6 +12,7 @@
   },
   "files": [
     "dist/*",
+    "dist/*.min.js",
     "src/*"
   ],
   "repository": {
