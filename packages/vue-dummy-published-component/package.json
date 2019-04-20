@@ -31,6 +31,7 @@
     "build:umd": "NODE_ENV=production rollup --config ../../rollup.config.js --format umd",
     "build:es": "NODE_ENV=production rollup --config ../../rollup.config.js --format es",
     "build:unpkg": "NODE_ENV=production rollup --config ../../rollup.config.js --format iife ",
+    "clean": "rm -rf dist && rm -rf storybook-static",
     "cypress": "cypress open",
     "prepublishOnly": "npm run clean && npm run build",
     "storybook": "start-storybook -p 6006"
