@@ -1,0 +1,14 @@
+{
+  "name": "vue-dummy-mono-repo",
+  "version": "1.0.0",
+  "description": "Sample MonoRepo for Dummy Published Vue Components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "matt@brophy.org",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.13.3"
+  }
+}
