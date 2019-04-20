@@ -17,9 +17,11 @@
     "lint": "eslint --ext js,vue .",
     "test": "npm run unit && npm run e2e",
     "e2e": "lerna run e2e",
+    "postinstall": "lerna bootstrap --hoist",
     "storybook:build": "lerna run storybook:build",
-    "unit": "jest"
-  },
+    "unit": "jest",
+    "version": "lerna clean --yes && lerna bootstrap --ignore-scripts -- --package-lock-only --no-audit && git add packages/*/package-lock.json"
+   },
   "devDependencies": {
     "@babel/core": "7.2.2",
     "@babel/preset-env": "7.3.1",
