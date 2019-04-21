@@ -1,5 +1,5 @@
 import { join } from 'path';
-import _ from 'lodash';
+import deepmerge from 'deepmerge';
 import vue from 'rollup-plugin-vue';
 import buble from 'rollup-plugin-buble';
 import commonjs from 'rollup-plugin-commonjs';
@@ -18,12 +18,12 @@ console.log('Loading dynamic rollup config from', pkgJsonFile);
 const pkgJson = require(pkgJsonFile);
 
 const fileTypeMap = {
-    umd: _.last(pkgJson.main.split('/')),
-    es: _.last(pkgJson.module.split('/')),
-    iife: _.last(pkgJson.unpkg.split('/')),
+    umd: pkgJson.main.split('/').splice(-1),
+    es: pkgJson.module.split('/').splice(-1),
+    iife: pkgJson.unpkg.split('/').splice(-1),
 };
 
-const config = _.merge({
+export default deepmerge({
     input: 'src/index.js',
     output: {
         name: null, // To be specified in sub-package package.json
@@ -43,12 +43,7 @@ const config = _.merge({
             },
         }),
         buble(),
+        // Only minify browser (iife) version
+        ...(argv.format === 'iife' ? [uglify()] : []),
     ],
 }, pkgJson.rollup);
-
-// Only minify browser (iife) version
-if (argv.format === 'iife') {
-    config.plugins.push(uglify());
-}
-
-export default config;
