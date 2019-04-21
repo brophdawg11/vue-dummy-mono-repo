@@ -24,7 +24,7 @@ This adds a few new features that you mind useful when creating robust open-sour
   * Configured via [`jest.config.js`](./jest.config.js)
   * Tests located in the `test/unit` directories of components
 * [Storybook](https://storybook.js.org/) Generation
-  * Configured via [`.storybook`](./.storybook)
+  * Configured via the `.storybook` directories of components
   * Stories located in the `stories` directories of components
 * End-to-End tests with [`cypress`](https://www.cypress.io/) that run on top of your generated Storybook  
   * This is a pattern I haven't seen before that makes a lot of sense to me.  Storybook is intended to show off the various usages of your components - so why not write integration tests to ensure those usages are working as expected?
