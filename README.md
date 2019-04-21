@@ -57,7 +57,7 @@ To get started with your own publishable components via a monorepo, I would star
 * Update all relevant `package.json` fields (`name`, `author`, `repository`, etc.)
 * Modify the exported component names in the `package.json` `rollup` field - which is deep-merged onto the shared rollup config.
 * Write your components, unit tests, stories, and E2E Tests!
-* Update the [LICENSE.md](./LICENSE.md`) with the proper license and attribution
+* Update the [LICENSE.md](./LICENSE.md) with the proper license and attribution
 
 #### Things to Add
 
