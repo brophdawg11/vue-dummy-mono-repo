@@ -8,7 +8,7 @@ If you wish to only publish a single component, you are better off using [vue-du
 
 Much of the baseline for this work comes from:
 
-* The [Packaging Vue Components for npm] entry in the Vue Cookbook
+* The [Packaging Vue Components for npm](https://vuejs.org/v2/cookbook/packaging-sfc-for-npm.html) entry in the Vue Cookbook
 * The associated [vue-sfc-rollup GitHub repo](https://github.com/team-innovation/vue-sfc-rollup)
 
 
@@ -81,3 +81,6 @@ npm run storybook:build
 npm run test:e2e
 ```
 
+### Publishing to NPM
+
+Please refer to the [NPM documentation](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) and the [Lerna Documentation](https://github.com/lerna/lerna/tree/master/commands/publish#readme)
