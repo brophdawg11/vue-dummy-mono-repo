@@ -22,14 +22,14 @@ This adds a few new features that you mind useful when creating robust open-sour
   * Configured via [`.eslintrc.js`](./.eslintrc.js)
 * Unit testing via [`jest`](https://jestjs.io/) and [`@vue/test-utils`](https://vue-test-utils.vuejs.org)
   * Configured via [`jest.config.js`](./jest.config.js)
-  * Tests located in the [`test/unit`](./test/unit) directory
+  * Tests located in the `test/unit` directories of components
 * [Storybook](https://storybook.js.org/) Generation
   * Configured via [`.storybook`](./.storybook)
-  * Stories located in the [`stories`](./stories) directory
+  * Stories located in the `stories` directories of components
 * End-to-End tests with [`cypress`](https://www.cypress.io/) that run on top of your generated Storybook  
   * This is a pattern I haven't seen before that makes a lot of sense to me.  Storybook is intended to show off the various usages of your components - so why not write integration tests to ensure those usages are working as expected?
   * Configured in [`cypress.json`](./cypress.json)
-  * Tests located in the [`tests/e2e`](./test/e2e) directory
+  * Tests located in the `tests/e2e` directories of components
 * Precommit hook using [`husky`](https://github.com/typicode/husky) to lint and test the component
 
 
