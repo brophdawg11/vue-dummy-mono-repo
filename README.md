@@ -1,6 +1,6 @@
 ## vue-dummy-mono-repo
 
-This is a sample boilerplate monorepo for a collection of Vue components that you intend to publish to the NPM registry.  To some extent, Eech individual component structure is based on the [vue-dummy-published-component](https://github.com/brophdawg11/vue-dummy-published-component) setup - and then adjusted to work in this monorepo setup with [Lerna](https://github.com/lerna/lerna).
+This is a sample boilerplate monorepo for a collection of Vue components that you intend to publish to the NPM registry.  To some extent, each individual component structure is based on the [vue-dummy-published-component](https://github.com/brophdawg11/vue-dummy-published-component) setup - and then adjusted to work in this monorepo setup with [Lerna](https://github.com/lerna/lerna).
 
 If you wish to only publish a single component, you are better off using [vue-dummy-published-component](https://github.com/brophdawg11/vue-dummy-published-component).
 
@@ -17,7 +17,7 @@ Much of the baseline for this work comes from:
 This adds a few new features that you mind useful when creating robust open-source Vue components (all of which you are welcome to change once your fork for your own purposes): 
 
 * Code linting via [`eslint`](https://eslint.org/)
-  * Leverages the [AirBnb ESLint Config](https://github.com/airbnb/javascript) via the [`eslint-config-airbnb-base`](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base( plugin)
+  * Leverages the [AirBnb ESLint Config](https://github.com/airbnb/javascript) via the [`eslint-config-airbnb-base`](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) plugin
   * Adds the [`eslint-plugin-vue`](https://github.com/vuejs/eslint-plugin-vue) plugin with the "recommended" settings
   * Configured via [`.eslintrc.js`](./.eslintrc.js)
 * Unit testing via [`jest`](https://jestjs.io/) and [`@vue/test-utils`](https://vue-test-utils.vuejs.org)
